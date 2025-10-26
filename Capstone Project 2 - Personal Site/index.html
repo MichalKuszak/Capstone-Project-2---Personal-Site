@@ -29,7 +29,7 @@
                         <a href="#overview" class="clr-primary">
                             <div class="content icn-inline">
                                 <img class="icon icn-secondary"
-                                    src="./images/about.svg">About me
+                                    src="./images/icons/about.svg">About me
                             </div>
                             </a>
                     </div>
@@ -37,7 +37,7 @@
                         <a href="#projects" class="clr-primary">
                             <div class="content icn-inline">
                                 <img class="icon icn-secondary"
-                                    src="./images/project-outlined-2.svg">My projects
+                                    src="./images/icons/project-outlined-2.svg">My projects
                             </div>
                             </a>
                     </div>
@@ -45,7 +45,7 @@
                         <a href="#skills" class="clr-primary">
                             <div class="content icn-inline">
                                 <img class="icon icn-secondary"
-                                    src="./images/skills.svg">Skills
+                                    src="./images/icons/skills.svg">Skills
                             </div>
                             </a>
                     </div>
@@ -53,7 +53,7 @@
                         <a href="#contact" class="clr-primary">
                             <div class="content icn-inline">
                                 <img class="icon icn-secondary"
-                                    src="./images/chat.svg">Contact me
+                                    src="./images/icons/chat.svg">Contact me
                             </div>
                             </a>
                     </div>
@@ -73,7 +73,7 @@
                             <a href="http://www.github.com">
                                 <div class="btn-rect-primary-cover">
                                     <div class="btn-rect-content icn-inline">
-                                        <img class="icon icn-secondary" src="./images/github.svg">
+                                        <img class="icon icn-secondary" src="./images/icons/github.svg">
                                         <div class="icn-text">GitHub</div>
                                     </div>
                                 </div>
@@ -85,7 +85,7 @@
                             <a href="#contact">
                                 <div class="btn-rect-secondary-cover">
                                     <div class="btn-rect-content icn-inline">
-                                        <img class="icon icn-primary" src="./images/chat.svg">
+                                        <img class="icon icn-primary" src="./images/icons/chat.svg">
                                         <div class="icn-text">Contact me</div>
                                     </div>
                                 </div>
@@ -96,37 +96,39 @@
             </section>
             <div class="divider"></div>
             <section id="overview">
-                <div class="work-areas">
-                    <h2>I work in:</h2>
-                    <ul>
-                        <li>
-                            <div class="icn-inline"><img class="icon icn-secondary" src="./images/web-fill.svg">
-                                <div class="icn-text">Web Development</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icn-inline"><img class="icon icn-secondary" src="./images/analysis.svg">
-                                <div class="icn-text">Data Analysis</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icn-inline"><img class="icon icn-secondary" src="./images/app-2.svg">
-                                <div class="icn-text">App Development</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icn-inline"><img class="icon icn-secondary" src="./images/gearsalt.svg">
-                                <div class="icn-text"> Web Scraping & Automation</div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="about-me">
-                    <h2>About me</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nulla illum distinctio officiis
-                        quaerat
-                        quo iure. Sint ullam et corporis aliquam ipsa soluta saepe omnis, aut consectetur odit laborum
-                        facilis.</p>
+                <div class="about-me-wrapper">
+                    <div class="work-areas">
+                        <h2>I work in:</h2>
+                        <ul>
+                            <li>
+                                <div class="icn-inline"><img class="icon icn-secondary" src="./images/icons/web-fill.svg">
+                                    <div class="icn-text">Web Development</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icn-inline"><img class="icon icn-secondary" src="./images/icons/analysis.svg">
+                                    <div class="icn-text">Data Analysis</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icn-inline"><img class="icon icn-secondary" src="./images/icons/app-2.svg">
+                                    <div class="icn-text">App Development</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icn-inline"><img class="icon icn-secondary" src="./images/icons/gearsalt.svg">
+                                    <div class="icn-text"> Web Scraping & Automation</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="about-me">
+                        <h2>About me</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nulla illum distinctio officiis
+                            quaerat
+                            quo iure. Sint ullam et corporis aliquam ipsa soluta saepe omnis, aut consectetur odit laborum
+                            facilis.</p>
+                    </div>
                 </div>
             </section>
             <div class="divider"></div>
@@ -136,36 +138,41 @@
                     excepturi inventore distinctio odio, qui quia quam facilis dignissimos ipsa iure eligendi odit
                     temporibus, commodi impedit placeat voluptate nam!</p>
                 <div class="carousel">
-                    <div id="item1" class="project-card">
-                        <a href="#">
+                    <a href="https://github.com/MichalKuszak/BreakoutGame">
+                        <div id="item1" class="project-card">
                             <h3 class="project-name">BreakOut Game</h3>
+                            <img src="./images/thumbnails/breakout.png" alt="A thumbnail of the Breakout Game window" class="project-thumbnail">
                             <p class="project-desc">A classic Breakout-style game developed using Pygame.</p>
-                        </a>
-                    </div>             
-                    <div id="item2" class="project-card">
-                        <a href="#">
+                        </div>
+                    </a>             
+                    <a href="https://github.com/MichalKuszak/WaterMarkApp">
+                        <div id="item2" class="project-card">
                             <h3 class="project-name">WaterMark App</h3>
+                            <img src="./images/thumbnails/watermark.png" alt="A thumbnail of the WaterMark App window" class="project-thumbnail">
                             <p class="project-desc">A simple desktop app for adding text watermarks to images.</p>
-                        </a>
-                    </div>             
-                    <div id="item3" class="project-card">
-                        <a href="#">
+                        </div>
+                    </a>      
+                    <a href="https://github.com/MichalKuszak/Typing_Speed_Test">
+                        <div id="item3" class="project-card">
                             <h3 class="project-name">Typing Speed Test App</h3>
+                            <img src="./images/thumbnails/typing-speed-app.png" alt="A thumbnail of the Typing Speed Test App window" class="project-thumbnail">
                             <p class="project-desc">A typing speed test app built with Python and Tkinter.</p>
-                        </a>
-                    </div>             
-                    <div id="item4" class="project-card">
-                        <a href="#">
+                        </div>
+                    </a>          
+                    <a href="https://github.com/MichalKuszak/Tic-Tac-Toe">
+                        <div id="item4" class="project-card">
                             <h3 class="project-name">Tic-Tac-Toe</h3>
+                            <img src="./images/thumbnails/tic-tac-toe.png" alt="A thumbnail of the Tic-Tac-Toe Game window" class="project-thumbnail">
                             <p class="project-desc">A fully interactive Tic-Tac-Toe game built with Python, featuring both Player vs Player (PvP) and Player vs CPU (PvC) modes.</p>
-                        </a>
-                    </div>             
-                    <div id="item5" class="project-card">
-                        <a href="#">
+                        </div>
+                    </a>          
+                    <a href="https://github.com/MichalKuszak/Text-to-Morse_Code_Converter">
+                        <div id="item5" class="project-card">
                             <h3 class="project-name">Text-to-Morse Code Converter</h3>
+                            <img src="./images/thumbnails/morse-code.png" alt="A thumbnail of the Text-to-Morse Code Converter App window" class="project-thumbnail">
                             <p class="project-desc">A simple app that allows you to easily translate any user-provided string into Morse Code.</p>
-                        </a>
-                    </div>             
+                        </div>
+                    </a>         
                 </div>
             </section>
             <div class="divider"></div>
@@ -176,21 +183,21 @@
                     <div id="python" class="language-card">
                         <div class="card-front">
                             <div class="card-content icn-inline">
-                                <img class="icon icn-secondary" src="./images/python.svg">
+                                <img class="icon icn-secondary" src="./images/icons/python.svg">
                                 <div class="icn-text">Python</div>
                             </div>
                         </div>
                         <div class="card-back">
                             <div class="card-content icn-inline">
-                                <img class="icon icn-secondary" src="./images/pandas-2.svg">
+                                <img class="icon icn-secondary" src="./images/icons/pandas-2.svg">
                                 <div class="icn-text">Pandas</div>
                             </div>
                             <div class="card-content icn-inline">
-                                <img class="icon icn-secondary" src="./images/selenium-2.svg">
+                                <img class="icon icn-secondary" src="./images/icons/selenium-2.svg">
                                 <div class="icn-text">Selenium</div>
                             </div>
                             <div class="card-content icn-inline">
-                                <img class="icon icn-secondary" src="./images/flask-2.svg">
+                                <img class="icon icn-secondary" src="./images/icons/flask-2.svg">
                                 <div class="icn-text">Flask</div>
                             </div>
                         </div>
@@ -198,13 +205,13 @@
                     <div id="html" class="language-card">
                         <div class="card-front">
                             <div class="card-content icn-inline">
-                                <img class="icon icn-secondary" src="./images/html.svg">
+                                <img class="icon icn-secondary" src="./images/icons/html.svg">
                                 <div class="icn-text">HTML</div>
                             </div>
                         </div>
                         <div class="card-back">
                             <div class="card-content icn-inline">
-                                <img class="icon icn-secondary" src="./images/html.svg">
+                                <img class="icon icn-secondary" src="./images/icons/html.svg">
                                 <div class="icn-text">HTML</div>
                             </div>
                         </div>
@@ -212,13 +219,13 @@
                     <div id="css" class="language-card">
                         <div class="card-front">
                             <div class="card-content icn-inline">
-                                <img class="icon icn-secondary" src="./images/css.svg">
+                                <img class="icon icn-secondary" src="./images/icons/css.svg">
                                 <div class="icn-text">CSS</div>
                             </div>
                         </div>
                         <div class="card-back">
                             <div class="card-content icn-inline">
-                                <img class="icon icn-secondary" src="./images/bootstrap.svg">
+                                <img class="icon icn-secondary" src="./images/icons/bootstrap.svg">
                                 <div class="icn-text">Bootstrap</div>
                             </div>
                         </div>
@@ -226,14 +233,14 @@
                     <div id="javascript" class="language-card">
                         <div class="card-front">
                             <div class="card-content icn-inline">
-                                <img class="icon icn-secondary" src="./images/javascript-16-2.svg">
+                                <img class="icon icn-secondary" src="./images/icons/javascript-16-2.svg">
                                 <div class="icn-text">JavaScript</div>
                             </div>
                         </div>
                         <div class="card-back">
                             <div class="libraries">
                                 <div class="card-content icn-inline">
-                                    <img class="icon icn-secondary" src="./images/node-js.svg">
+                                    <img class="icon icn-secondary" src="./images/icons/node-js.svg">
                                     <div class="icn-text">Node.js</div>
                                 </div>
                             </div>
@@ -245,56 +252,56 @@
             <section id="contact">
                 <h2 class="clr-secondary">Contact me</h2>
 
-                <div id="facebook" class="btn-circle">
-                    <div class="btn-box">
-                        <a href="http://www.facebook.com">
-                            <div class="btn-cover btn-circle"></div>
-                            <div class="btn-content">
-                                <img class="icon icn-secondary" src="./images/facebook-2.svg">
-                            </div>
-                        </a>
+                <div class="contact-btn-wrapper">
+                    <div id="facebook" class="btn-circle">
+                        <div class="btn-box">
+                            <a href="http://www.facebook.com">
+                                <div class="btn-cover btn-circle"></div>
+                                <div class="btn-content">
+                                    <img class="icon icn-secondary" src="./images/icons/facebook-2.svg">
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-
-                <div id="email" class="btn-circle">
-                    <div class="btn-box">
-                        <a href="#">
-                            <div class="btn-cover btn-circle"></div>
-                            <div class="btn-content">
-                                <img class="icon icn-secondary" src="./images/mail-2.svg">
-                            </div>
-                        </a>
+                    <div id="email" class="btn-circle">
+                        <div class="btn-box">
+                            <a href="#">
+                                <div class="btn-cover btn-circle"></div>
+                                <div class="btn-content">
+                                    <img class="icon icn-secondary" src="./images/icons/mail-2.svg">
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-
-                <div id="instagram" class="btn-circle">
-                    <div class="btn-box">
-                        <a href="http://www.instagram.com">
-                            <div class="btn-cover btn-circle"></div>
-                            <div class="btn-content">
-                                <img class="icon icn-secondary" src="./images/instagram-2.svg">
-                            </div>
-                        </a>
+                    <div id="instagram" class="btn-circle">
+                        <div class="btn-box">
+                            <a href="http://www.instagram.com">
+                                <div class="btn-cover btn-circle"></div>
+                                <div class="btn-content">
+                                    <img class="icon icn-secondary" src="./images/icons/instagram-2.svg">
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div id="x" class="btn-circle">
-                    <div class="btn-box">
-                        <a href="http://www.x.com">
-                            <div class="btn-cover btn-circle"></div>
-                            <div class="btn-content">
-                                <img class="icon icn-secondary" src="./images/x-2.svg">
-                            </div>
-                        </a>
+                    <div id="x" class="btn-circle">
+                        <div class="btn-box">
+                            <a href="http://www.x.com">
+                                <div class="btn-cover btn-circle"></div>
+                                <div class="btn-content">
+                                    <img class="icon icn-secondary" src="./images/icons/x-2.svg">
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div id="linkedin" class="btn-circle">
-                    <div class="btn-box">
-                        <a href="http://www.linkedin.com">
-                            <div class="btn-cover btn-circle"></div>
-                            <div class="btn-content">
-                                <img class="icon icn-secondary" src="./images/linkedin-2.svg">
-                            </div>
-                        </a>
+                    <div id="linkedin" class="btn-circle">
+                        <div class="btn-box">
+                            <a href="http://www.linkedin.com">
+                                <div class="btn-cover btn-circle"></div>
+                                <div class="btn-content">
+                                    <img class="icon icn-secondary" src="./images/icons/linkedin-2.svg">
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
