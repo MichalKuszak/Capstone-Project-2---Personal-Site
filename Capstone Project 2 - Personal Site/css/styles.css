@@ -18,7 +18,7 @@
     --project-card-gap: 2rem;
 
     --card-padding: clamp(.5rem, 3cqi, 1.5rem);
-    --text-size: clamp(.6rem, 2.6cqi, 1rem);
+    --text-size: clamp(.5rem, 2.6cqi, 1rem);
     --accented-text-size: clamp(.7rem, 3cqi, 1.4rem);
 
 
@@ -28,6 +28,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -114,8 +118,10 @@ a {
 
 section {
     flex-basis: 100%;
-    padding-top: 2rem;
+    align-content: center;
+    /* padding-top: 2rem; */
     margin: 0;
+    min-height: 50dvh;
 }
 
 .main-container {
@@ -146,15 +152,11 @@ section {
 
 
 
-nav {
-    /* margin-inline: 4rem; */
-    /* background: var(--clr-bg); */
+/* nav {
     background: transparent;
-    /* padding-left: 4rem; */
     width: 100%;
     padding-block: 2rem;
     display: flex;
-    /* flex-wrap: wrap; */
     height: 2rem;
     align-items: center;
     justify-content: space-between;
@@ -185,14 +187,78 @@ nav::after {
 .nav-buttons-container {
     justify-self: flex-end;
     display: flex;
-    flex-wrap: nowrap;
-}
+    flex-wrap: nowrap; */
+
 /*TODO: Make hamburger menu after learning JS */
-@media(max-width: 900px) {
+/* @media(max-width: 900px) {
     .nav-buttons-container {
         display: none;
     }
+} */
+
+nav {
+    padding: 1rem 3rem;
+    margin-inline: auto;
+    margin-block: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    container-type: inline-size;
+    gap: 3rem;
+    /* position: sticky; */
+    /* z-index: 1000;
+    top: 0; */
+    width: 100%;
 }
+
+nav > *,
+nav ul > * {
+    min-width: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.btn-nav img {
+    display: inline;
+    margin-right: 1rem;
+    width: var(--text-size);
+}
+
+.nav-mark {
+    font-weight: bold;
+    font-size: var(--accented-text-size);
+    color: var(--clr-primary);
+    justify-self: flex-start;
+    text-wrap: nowrap;
+}
+
+.btn-nav {
+    font-size: var(--text-size);
+}
+
+@media (max-width: 870px) {
+    
+    nav {
+        padding-inline: 0;
+        margin-inline: -2.5rem;
+        width: calc(100% + 5rem);
+    }    
+
+    nav ul {
+        gap: var(--text-size);
+    }
+
+    .btn-nav img {
+        margin-right: 0.2rem;
+    }
+}
+
+
 /* HERO */
 
 .hero-container {
@@ -395,7 +461,7 @@ nav::after {
 }
 
 .carousel:hover .project-card,
-.carousel:focus .project-card {
+.project-card:focus .project-card{
     animation-play-state: paused;
 }
 
@@ -527,8 +593,15 @@ nav::after {
         transition: opacity ease 250ms;
     }
 
-    .carousel-nav a:hover {
+    .carousel-nav a:hover,
+    .carousel-nav a:focus {
         opacity: 1;
+    }
+
+.carousel-nav a:focus-visible {
+        outline: 2px solid;
+        outline-color: var(--accent-color);
+        outline-offset: .25rem;
     }
 }
 
@@ -850,7 +923,7 @@ nav::after {
 }
 
 
-.btn-nav a {
+.btn-nav {
     display: flex;
     align-items: center;
     justify-content: flex-start; 
@@ -861,12 +934,12 @@ nav::after {
     transition: 150ms ease-in-out;
 }
 
-.btn-nav a:hover, 
-.btn-nav a:focus {
+.btn-nav:hover, 
+.btn-nav:focus {
     transform: scale(1.1);
 }
 
-.btn-nav a::after {
+.btn-nav::after {
     content: "";
     width: 0px;
     height: 4px;
@@ -879,13 +952,13 @@ nav::after {
     transition: 300ms ease-in-out;
 }
 
-.btn-nav a:hover::after, 
-.btn-nav a:focus::after 
+.btn-nav:hover::after, 
+.btn-nav:focus::after 
 {
     width: 100%;
 }
 
-.btn-nav a:active {
+.btn-nav:active {
     color: var(--clr-secondary);
 }
 
@@ -896,3 +969,32 @@ footer {
     border-top: 2px solid var(--clr-primary);
     text-align: center;
 }
+
+/* ANIMATIONS */
+
+.fade-up {
+    animation: fade-up both;
+    animation-timeline: view(50% 10%);
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(.25rem) scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+/* 
+section:nth-child(1) {
+    animation-range: entry 20% cover 40%;
+}
+section:nth-child(2) {
+    animation-range: entry 40% cover 60%;
+}
+section:nth-child(3) {
+    animation-range: entry 60% cover 80%;
+} */
+

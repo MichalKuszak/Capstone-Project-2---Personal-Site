@@ -20,13 +20,13 @@
 <body>
     <main>
         <div class="main-container">
-            <nav>
+            <!-- <nav>
                 <div class="nav-mark">
                     As Achilles
                 </div>
                 <div class="nav-buttons-container">
                     <div class="btn-nav icn-inline">
-                        <a href="#overview" class="clr-primary">
+                        <a href="#overview" class="clr-primary" aria-label="Button, go to the About me section">
                             <div class="content icn-inline">
                                 <img class="icon icn-secondary"
                                     src="./images/icons/about.svg" alt="The letter 'i' in a circle">About me
@@ -34,7 +34,7 @@
                             </a>
                     </div>
                     <div class="btn-nav icn-inline">
-                        <a href="#projects" class="clr-primary">
+                        <a href="#projects" class="clr-primary" aria-label="Button, go to the My projects section">
                             <div class="content icn-inline">
                                 <img class="icon icn-secondary"
                                     src="./images/icons/project-outlined-2.svg" alt="An inverted bar chart">My projects
@@ -42,7 +42,7 @@
                             </a>
                     </div>
                     <div class="btn-nav">
-                        <a href="#skills" class="clr-primary">
+                        <a href="#skills" class="clr-primary" aria-label="Button, go to the Skills section">
                             <div class="content icn-inline">
                                 <img class="icon icn-secondary"
                                     src="./images/icons/skills.svg" alt="A person with skill branches reaching to the right">Skills
@@ -50,7 +50,7 @@
                             </a>
                     </div>
                     <div class="btn-nav icn-inline">
-                        <a href="#contact" class="clr-primary">
+                        <a href="#contact" class="clr-primary" aria-label="Button, go to the Contact section">
                             <div class="content icn-inline">
                                 <img class="icon icn-secondary"
                                     src="./images/icons/chat.svg" alt="Two chat bubbles">Contact me
@@ -58,8 +58,36 @@
                             </a>
                     </div>
                 </div>
+            </nav> -->
+            <nav>
+                <div class="nav-mark">
+                    As Achilles
+                </div>
+                <ul>
+                    <li>
+                        <a href="#overview" class="clr-primary btn-nav" aria-label="Button, go to the About me section">
+                            <img class="icon icn-secondary" src="./images/icons/about.svg" alt="The letter 'i' in a circle">About me
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="clr-primary btn-nav" aria-label="Button, go to the My projects section">
+                            <img class="icon icn-secondary" src="./images/icons/project-outlined-2.svg" alt="An inverted bar chart">My projects
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#skills" class="clr-primary btn-nav" aria-label="Button, go to the Skills section">
+                            <img class="icon icn-secondary" src="./images/icons/skills.svg"     alt="A person with skill branches reaching to the right">Skills
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="clr-primary btn-nav" aria-label="Button, go to the Contact section">
+                            <img class="icon icn-secondary" src="./images/icons/chat.svg" alt="Two chat bubbles">Contact me
+                        </a>
+                    </li>
+                </ul>
             </nav>
-            <section id="hero">
+            <section id="hero" class="fade-up">
                 <div class="hero-container">
                     <!-- <img class="img-avatar" src="./images/avatar-strona.png" alt="A photo of me" /> -->
                     <div class="avatar-container">
@@ -75,7 +103,7 @@
                         <div class="hero-buttons-container">
                             <div class="btn-rect btn-primary">
                                 <div class="btn-rect-box">
-                                    <a href="http://www.github.com" rel="noopener" target="_blank">
+                                    <a href="http://www.github.com" rel="noopener" target="_blank" aria-label="Button, go to my GitHub page">
                                         <div class="btn-rect-primary-cover">
                                             <div class="btn-rect-content icn-inline">
                                                 <img class="icon icn-secondary" src="./images/icons/github.svg" alt="GitHub logo icon">
@@ -87,7 +115,7 @@
                             </div>
                             <div class="btn-rect btn-secondary">
                                 <div class="btn-rect-box">
-                                    <a href="#contact">
+                                    <a href="#contact" aria-label="Button, go to the Contact section">
                                         <div class="btn-rect-secondary-cover">
                                             <div class="btn-rect-content icn-inline">
                                                 <img class="icon icn-primary" src="./images/icons/chat.svg" alt="Two chat bubbles">
@@ -102,7 +130,7 @@
                 </div>
             </section>
                 <div class="divider"></div>
-            <section id="overview">
+            <section id="overview" class="fade-up">
                 <div class="about-me-wrapper">
                     <div class="work-areas">
                         <h2>I work in:</h2>
@@ -139,42 +167,42 @@
                 </div>
             </section>
             <div class="divider"></div>
-            <section id="projects">
+            <section id="projects" class="fade-up">
                 <h2>My projects</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit accusamus perferendis
                     excepturi inventore distinctio odio, qui quia quam facilis dignissimos ipsa iure eligendi odit
                     temporibus, commodi impedit placeat voluptate nam!</p>
                 <div class="carousel">
                     <div class="carousel-cards">
-                        <a href="https://github.com/MichalKuszak/BreakoutGame" rel="noopener" target="_blank">
+                        <a href="https://github.com/MichalKuszak/BreakoutGame" rel="noopener" target="_blank" aria-label="Link, go to my BreakOut Game project repo">
                             <div id="item1" class="project-card">
                                 <h3 class="project-name">BreakOut Game</h3>
                                 <img src="./images/thumbnails/breakout.png" alt="A thumbnail of the Breakout Game window" class="project-thumbnail">
                                 <p class="project-desc">A classic Breakout-style game developed using Pygame.</p>
                             </div>
                         </a>
-                        <a href="https://github.com/MichalKuszak/WaterMarkApp" rel="noopener" target="_blank">
+                        <a href="https://github.com/MichalKuszak/WaterMarkApp" rel="noopener" target="_blank" aria-label="Link, go to my WaterMark App project repo">
                             <div id="item2" class="project-card">
                                 <h3 class="project-name">WaterMark App</h3>
                                 <img src="./images/thumbnails/watermark.png" alt="A thumbnail of the WaterMark App window" class="project-thumbnail">
                                 <p class="project-desc">A simple desktop app for adding text watermarks to images.</p>
                             </div>
                         </a>
-                        <a href="https://github.com/MichalKuszak/Typing_Speed_Test" rel="noopener" target="_blank">
+                        <a href="https://github.com/MichalKuszak/Typing_Speed_Test" rel="noopener" target="_blank" aria-label="Link, go to my Typing Speed Test App project repo">
                             <div id="item3" class="project-card">
                                 <h3 class="project-name">Typing Speed Test App</h3>
                                 <img src="./images/thumbnails/typing-speed-app.png" alt="A thumbnail of the Typing Speed Test App window" class="project-thumbnail">
                                 <p class="project-desc">A typing speed test app built with Python and Tkinter.</p>
                             </div>
                         </a>
-                        <a href="https://github.com/MichalKuszak/Tic-Tac-Toe" rel="noopener" target="_blank">
+                        <a href="https://github.com/MichalKuszak/Tic-Tac-Toe" rel="noopener" target="_blank" aria-label="Link, go to my Tic-Tac-Toe Game project repo">
                             <div id="item4" class="project-card">
                                 <h3 class="project-name">Tic-Tac-Toe</h3>
                                 <img src="./images/thumbnails/tic-tac-toe.png" alt="A thumbnail of the Tic-Tac-Toe Game window" class="project-thumbnail">
                                 <p class="project-desc">A fully interactive Tic-Tac-Toe game built with Python, featuring both Player vs Player (PvP) and Player vs CPU (PvC) modes.</p>
                             </div>
                         </a>
-                        <a href="https://github.com/MichalKuszak/Text-to-Morse_Code_Converter" rel="noopener" target="_blank">
+                        <a href="https://github.com/MichalKuszak/Text-to-Morse_Code_Converter" rel="noopener" target="_blank" aria-label="Link, go to my Text-to-Morse-Code Converter App project repo">
                             <div id="item5" class="project-card">
                                 <h3 class="project-name">Text-to-Morse Code Converter</h3>
                                 <img src="./images/thumbnails/morse-code.png" alt="A thumbnail of the Text-to-Morse Code Converter App window" class="project-thumbnail">
@@ -184,15 +212,15 @@
                     </div>
                 </div>
                 <div class="carousel-nav">
-                    <a href="#item1"></a>
-                    <a href="#item2"></a>
-                    <a href="#item3"></a>
-                    <a href="#item4"></a>
-                    <a href="#item5"></a>
+                    <a href="#item1" aria-controls="item1" aria-label="Button, go to the first slide"></a>
+                    <a href="#item2" aria-controls="item2" aria-label="Button, go to the second slide"></a>
+                    <a href="#item3" aria-controls="item3" aria-label="Button, go to the third slide"></a>
+                    <a href="#item4" aria-controls="item4" aria-label="Button, go to the fourth slide"></a>
+                    <a href="#item5" aria-controls="item5" aria-label="Button, go to the fifth slide"></a>
                 </div>
             </section>
             <div class="divider"></div>
-            <section id="skills">
+            <section id="skills" class="fade-up">
                 <h2 class="clr-secondary">Skills</h2>
                 <h3 class="clr-primary">I code with:</h3>
                 <div class="cards-container">
@@ -273,13 +301,13 @@
                 </div>
             </section>
             <div class="divider"></div>
-            <section id="contact">
+            <section id="contact" class="fade-up">
                 <h2 class="clr-secondary">Contact me</h2>
 
                 <div class="contact-btn-wrapper">
                     <div id="facebook" class="btn-circle">
                         <div class="btn-box">
-                            <a href="http://www.facebook.com" rel="noopener" target="_blank">
+                            <a href="http://www.facebook.com" rel="noopener" target="_blank" aria-label="Button, go to my Facebook profile">
                                 <div class="btn-cover btn-circle"></div>
                                 <div class="btn-content">
                                     <img class="icon icn-secondary" src="./images/icons/facebook-2.svg" alt="Facebook logo">
@@ -289,7 +317,7 @@
                     </div>
                     <div id="email" class="btn-circle">
                         <div class="btn-box">
-                            <a href="mailto:#" rel="noopener" target="_blank">
+                            <a href="mailto:#" rel="noopener" target="_blank" aria-label="Button, open your mail app to contact me via mail">
                                 <div class="btn-cover btn-circle"></div>
                                 <div class="btn-content">
                                     <img class="icon icn-secondary" src="./images/icons/mail-2.svg" alt="An envelope">
@@ -299,7 +327,7 @@
                     </div>
                     <div id="instagram" class="btn-circle">
                         <div class="btn-box">
-                            <a href="http://www.instagram.com" rel="noopener" target="_blank">
+                            <a href="http://www.instagram.com" rel="noopener" target="_blank" aria-label="Button, go to my Instagram profile">
                                 <div class="btn-cover btn-circle"></div>
                                 <div class="btn-content">
                                     <img class="icon icn-secondary" src="./images/icons/instagram-2.svg" alt="instagram logo">
@@ -309,7 +337,7 @@
                     </div>
                     <div id="x" class="btn-circle">
                         <div class="btn-box">
-                            <a href="http://www.x.com" rel="noopener" target="_blank">
+                            <a href="http://www.x.com" rel="noopener" target="_blank" aria-label="Button, go to my X profile">
                                 <div class="btn-cover btn-circle"></div>
                                 <div class="btn-content">
                                     <img class="icon icn-secondary" src="./images/icons/x-2.svg" alt="X platform logo">
@@ -319,7 +347,7 @@
                     </div>
                     <div id="linkedin" class="btn-circle">
                         <div class="btn-box">
-                            <a href="http://www.linkedin.com" rel="noopener" target="_blank">
+                            <a href="http://www.linkedin.com" rel="noopener" target="_blank" aria-label="Button, go to my LinkedIn profile">
                                 <div class="btn-cover btn-circle"></div>
                                 <div class="btn-content">
                                     <img class="icon icn-secondary" src="./images/icons/linkedin-2.svg" alt="LinkedIn logo">
