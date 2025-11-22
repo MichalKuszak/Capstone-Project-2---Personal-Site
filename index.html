@@ -18,36 +18,44 @@
 </head>
 
 <body>
-    <main>
-        <div class="main-container">
-            <nav>
-                <div class="nav-mark">
-                    As Achilles
-                </div>
-                <ul>
-                    <li>
-                        <a href="#overview" class="clr-primary btn-nav" aria-label="Button, go to the About me section">
-                            <img class="icon icn-secondary" src="./images/icons/about.svg" alt="The letter 'i' in a circle">About me
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#projects" class="clr-primary btn-nav" aria-label="Button, go to the My projects section">
-                            <img class="icon icn-secondary" src="./images/icons/project-outlined-2.svg" alt="An inverted bar chart">My projects
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="#skills" class="clr-primary btn-nav" aria-label="Button, go to the Skills section">
-                            <img class="icon icn-secondary" src="./images/icons/skills.svg"     alt="A person with skill branches reaching to the right">Skills
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="clr-primary btn-nav" aria-label="Button, go to the Contact section">
-                            <img class="icon icn-secondary" src="./images/icons/chat.svg" alt="Two chat bubbles">Contact me
-                        </a>
-                    </li>
-                </ul>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                    <a href="index.html" class="nav-logo">
+                        <span>As Achilles</span>
+                    </a>
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="hamburger">
+                        <span></span>
+                    </label>
+                    <ul class="menu">
+                        <li>
+                            <a href="#overview" class="clr-primary btn-nav" aria-label="Button, go to the About me section">
+                                <img class="icon icn-secondary" src="./images/icons/about.svg" alt="The letter 'i' in a circle">About me
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#projects" class="clr-primary btn-nav" aria-label="Button, go to the My projects section">
+                                <img class="icon icn-secondary" src="./images/icons/project-outlined-2.svg" alt="An inverted bar chart">My projects
+                            </a>
+                        </li>
+                
+                        <li>
+                            <a href="#skills" class="clr-primary btn-nav" aria-label="Button, go to the Skills section">
+                                <img class="icon icn-secondary" src="./images/icons/skills.svg"     alt="A person with skill branches reaching to the right">Skills
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="clr-primary btn-nav" aria-label="Button, go to the Contact section">
+                                <img class="icon icn-secondary" src="./images/icons/chat.svg" alt="Two chat bubbles">Contact me
+                            </a>
+                        </li>
+                    </ul>
+            </div>
             </nav>
+    </header>
+    <main>
+            
             <section id="hero" class="fade-up">
                 <div class="hero-container">
                     <!-- <img class="img-avatar" src="./images/avatar-strona.png" alt="A photo of me" /> -->
@@ -321,7 +329,6 @@
                 
 
             </section>
-        </div>
     </main>
     <footer>
         <p>Copyright © 2025</p>
