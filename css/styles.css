@@ -15,17 +15,28 @@
     
     
     --maxwidth: 100rem;
-    --bodymargin: clamp(1px, 20vw, 4rem);
+    
+    --pad-md: clamp(1rem, 2vw, 2rem);
+    --pad-lg: clamp(1rem, 0.4000rem + 3.0000vw, 4rem);
+
     
     --ff-primary: Sansation, serif;
     --ff-secondary: Oxanium, serif;
 
-    --project-card-size: min(25rem, 80vw, 80vh);
+    /* --fs-md: clamp(1rem, 1.5vw, 1.2rem); */
+    --fs-xs: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
+    --fs-sm: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+    --fs-md: clamp(1.875rem, 1.75rem + 0.625vw, 2.5rem);
+    --fs-lg: clamp(2.25rem, 2rem + 1.25vw, 3.5rem);
+    --fs-xl: clamp(3rem, 2.6rem + 2vw, 5rem);
+
+    /* --project-card-size: min(25rem, 80vw, 80vh); */
+    --project-card-size: clamp(250px, min(25rem, 80vw, 80vh), 500px);
     --project-card-gap: 2rem;
 
     --card-padding: clamp(.5rem, 3cqi, 1.5rem);
-    --text-size: clamp(.5rem, 2.6cqi, 1rem);
-    --accented-text-size: clamp(1.1rem, 2vw, 1.5rem);
+
+ 
 
 
 }
@@ -34,6 +45,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+*:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: .2rem;
+    /* border-radius: inherit; */
 }
 
 html {
@@ -60,7 +77,7 @@ body {
 
 p {
     color: var(--clr-primary);
-    font-size: var(--text-size);
+    font-size: var(--fs-sm);
 }
 
 img {
@@ -89,8 +106,9 @@ img {
 .divider {
     height: 0.25rem;
     background: var(--gradient-primary);
-    width: 100%;
+    width: 80%;
     margin-block: 2rem;
+    margin-inline: var(--pad-lg);
 }
 
 h1, 
@@ -98,25 +116,28 @@ h2,
 h3 {
     font-family: var(--ff-secondary);
     color: var(--clr-secondary);
-    margin-block: 1em;
 }
 
 h1 {
-    font-size: clamp(1.8rem, calc(7vw + 1rem), 5rem);
+    /* font-size: clamp(1.8rem, calc(7vw + 1rem), 5rem); */
+    font-size: var(--fs-xl);
     font-weight: bold;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 0;
 }
 
 h2 {
+    margin-block: .5em;
     text-align: center;
-    font-size: clamp(1.5rem, calc(6vw + 1rem), 2rem);
+    /* font-size: clamp(1.5rem, calc(6vw + 1rem), 2rem); */
+    font-size: var(--fs-md);
 }
 
 h3 {
-    font-size: clamp(.6rem, 6cqi, 1.8rem);
+    margin-bottom: .5em;
+    font-size: clamp(.6rem, calc(6cqi + 1rem), 1.8rem);
+    font-size: var(--fs-sm);
 }
 
 
@@ -130,7 +151,7 @@ section {
     flex-basis: 100%;
     align-content: center;
     /* padding-top: 2rem; */
-    margin: 0;
+    margin-inline: var(--pad-lg);
     min-height: 50dvh;
 }
 
@@ -139,10 +160,10 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-inline: var(--bodymargin);
-    padding-inline: 4rem;
+    margin-inline: var(--pad-lg);
+    /* padding-inline: var(--pad-lg); */
     background-image: var(--gradient-bg);
-    background-size: 400%;
+    /* background-size: 400%; */
     animation: bg-animation 12s infinite alternate;
 }
 
@@ -156,7 +177,8 @@ nav {
         rgba(8, 10, 14, 0.55), 
         rgba(8, 10, 14, 0.35));
     padding-block: clamp(0.5rem, calc(1vw + 0.1rem), 1.5rem);
-    margin-inline: var(--bodymargin);
+    padding-inline: 1em;
+    margin-inline: var(--pad-lg);
     border-bottom:  1px solid var(--stroke);
     backdrop-filter: blur(.75rem);
     z-index: 100;
@@ -174,7 +196,7 @@ nav {
     margin: auto;
     display: flex;
     align-items: center;
-    gap: clamp(1rem, 15vw, 30rem);
+    gap: clamp(1rem, 1.75vw, 30rem);
     justify-content: space-between;
 
 }
@@ -222,7 +244,7 @@ nav {
 
 .nav-logo {
     font-weight: 700;
-    font-size: var(--accented-text-size);
+    font-size: var(--fs-md);
     color: var(--clr-primary);
     text-wrap: nowrap;
 }
@@ -230,11 +252,11 @@ nav {
 
 .btn-nav img {
     display: inline;
-    width: clamp(1rem, calc(.2vw + 1rem), 1.5rem);
-    height: clamp(1rem, calc(.2vw + 1rem), 1.5rem);
+    width: clamp(.75rem, calc(.2vw + 1rem), 1.5rem);
+    height: clamp(.75rem, calc(.2vw + 1rem), 1.5rem);
 }
 
-@media(max-width: 900px) {
+@media(max-width: 940px) {
     .menu {
         position: absolute;
         top:100%;
@@ -250,6 +272,7 @@ nav {
         opacity: 0;
         pointer-events: none;
         overflow: hidden;
+        visibility: hidden;
         transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
     }
 
@@ -266,12 +289,15 @@ nav {
         margin-top: 1rem;
     }
 
+    .hamburger:focus + .menu,
+    .menu:focus-within, 
     .menu-toggle:checked~.menu {
         max-height: 100vh;
         height: 100vh;
         padding: 1.5rem 0;
         opacity: 1;
         pointer-events: auto;
+        visibility: visible;
     }
 
     .hamburger {
@@ -323,13 +349,13 @@ nav ul {
 .btn-nav img {
     display: inline;
     margin-right: 1rem;
-    width: var(--text-size);
+    width: var(--fs-lg);
 }
 
 
 
 .btn-nav {
-    font-size: var(--text-size);
+    font-size: var(--fs-lg);
 }
 
 @media (max-width: 870px) {
@@ -341,7 +367,7 @@ nav ul {
     }    
 
     nav ul {
-        gap: var(--text-size);
+        gap: var(--fs-lg);
     }
 
     .btn-nav img {
@@ -397,7 +423,7 @@ nav ul {
 .hero-desc {
     color: var(--clr-primary);
     margin-top: 0;
-    font-size: var(--accented-text-size);
+    font-size: var(--fs-md);
     font-weight: 300;
 }
 
@@ -413,7 +439,7 @@ nav ul {
 
 /* ABOUT */
 #overview {
-    padding-inline: auto;
+    /* padding-inline: auto; */
 }
 
 #overview h2 {
@@ -421,8 +447,8 @@ nav ul {
 }
 
 .about-me-wrapper {
-    margin-inline: auto;
-    max-width: 67%;
+    margin-inline: clamp(1rem, 2vw, 2rem);
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 4rem;
@@ -438,20 +464,30 @@ nav ul {
     color: var(--clr-primary);
     list-style: none;
     line-height: 1.6;
-    font-size: var(--accented-text-size);
+    /* font-size: var(--fs-md); */
+    flex-basis: 33%;
 }
 
 .work-areas .icn-inline {
     justify-content: left;
 }
 
+
+.icn-text {
+    font-size: var(--fs-sm);
+}
+
+.icn-inline .icon {
+    width: var(--fs-sm);
+}
+
 .about-me {
-    flex-basis: 60%;
+    flex-basis: 67%;
     flex: 1;
 }
 
 .about-me p {
-    font-size: var(--accented-text-size);
+    font-size: var(--fs-sm);
 }
 
 /* PROJECTS */
@@ -467,7 +503,7 @@ nav ul {
 @media(min-width: 901px) and (prefers-reduced-motion: no-preference) {
     
 .carousel {
-    container-type: size;
+    container-type: inline-size;
     aspect-ratio: 16 / 9;
     width: 100%;
     height: var(--project-card-size);
@@ -515,7 +551,6 @@ nav ul {
 
 
 .project-name {
-    font-size: 1.8rem;
     max-width: 100%;
 }
 
@@ -571,7 +606,7 @@ nav ul {
     .carousel {
         container-type: size;
         aspect-ratio: 1/1;
-        --card-size: min(90vw, 28rem);
+        /* --card-size: min(90vw, 28rem); */
         width: 100%;
         max-width: 100%;
         margin-inline: auto;
@@ -609,8 +644,9 @@ nav ul {
 
     .project-card {
         flex: 0 0 auto;
-        inline-size: min(95cqi, 95cqb);
-        block-size: min(95cqi, 95cqb);
+        inline-size: max(250px, min(95cqi, 95cqb));
+        block-size: max(250px, min(95cqi, 95cqb));
+        /* block-size: min(95cqi, 95cqb); */
         aspect-ratio: 1;
 
         scroll-snap-align: start;
@@ -794,10 +830,16 @@ nav ul {
 
 .card-content {
     padding-inline: 1em;
-    margin: 0;
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
 }
 
+.card-content .icon {
+    width: var(--fs-sm);
+}
+
+.card-content .icn-text {
+    font-size: var(--fs-sm);
+}
 /* CONTACT */
 /* #contact {
     display: flex;
@@ -911,7 +953,7 @@ nav ul {
 }
 
 .btn-circle:hover .btn-box::after, 
-.btn-circle:focus .btn-box::after {    
+.btn-circle a:focus .btn-box::after {    
     background: conic-gradient(from var(--angle), transparent 10%, #FE6F1F, #F24B64, #C14C8D, #FE6F1F);
     animation: border-rotation 2.5s linear infinite, fade 0.5s linear 1;
     z-index: -1;
@@ -1019,7 +1061,7 @@ nav ul {
     align-items: center;
     justify-content: flex-start; 
     position: relative;
-    font-size: clamp(1rem, calc(.2vw + 1rem), 1.5rem);
+    font-size: var(--fs-sm);
     width: max-content;
     padding: 0.5em 0.75rem;
     gap: clamp(.5rem, calc(.2vw + 1rem), 1rem);
