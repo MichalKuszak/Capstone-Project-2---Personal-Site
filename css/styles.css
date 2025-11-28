@@ -953,7 +953,7 @@ nav ul {
 }
 
 .btn-circle:hover .btn-box::after, 
-.btn-circle a:focus .btn-box::after {    
+.btn-circle:focus .btn-box::after {    
     background: conic-gradient(from var(--angle), transparent 10%, #FE6F1F, #F24B64, #C14C8D, #FE6F1F);
     animation: border-rotation 2.5s linear infinite, fade 0.5s linear 1;
     z-index: -1;
