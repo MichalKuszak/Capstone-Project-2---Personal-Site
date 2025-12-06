@@ -40,7 +40,7 @@
     padding: 0;
 }
 
-*:focus {
+*:focus-visible {
     outline: 2px solid var(--accent-color);
     outline-offset: .4rem;
 }
@@ -126,7 +126,6 @@ h2 {
 
 h3 {
     margin-bottom: .5em;
-    /* font-size: clamp(1rem, calc(5vw + 1rem), 1.6rem); */
     font-size: var(--fs-sm);
 }
 
@@ -153,7 +152,6 @@ main {
     background-image: var(--gradient-bg);
     animation: bg-animation 12s infinite alternate;
 }
-
 
 /* NAVBAR */
 
@@ -278,7 +276,7 @@ nav {
         margin-top: 1rem;
     }
 
-    .hamburger:focus + .menu,
+    .hamburger:focus-visible + .menu,
     .menu:focus-within, 
     .menu-toggle:checked~.menu {
         max-height: 100vh;
@@ -294,20 +292,20 @@ nav {
     }
 
     .menu-toggle:checked~.hamburger span,
-    .hamburger:focus span,
+    .hamburger:focus-visiblespan,
     .hamburger:has(+ .menu:focus-within) span {
         background: transparent;
     }
 
 
-    .hamburger:focus span::after,
+    .hamburger:focus-visiblespan::after,
     .menu-toggle:checked~.hamburger span::after,
     .hamburger:has(+ .menu:focus-within) span::after  {
         top: 0;
         transform: rotate(45deg);
     }
 
-    .hamburger:focus span::before,
+    .hamburger:focus-visiblespan::before,
     .menu-toggle:checked~.hamburger span::before,
     .hamburger:has(+ .menu:focus-within) span::before  {
         top: 0;
@@ -325,12 +323,7 @@ nav {
     justify-content: center;
     gap: 3rem;
 }
-/* 
-@media(max-width:376px) {
-    .avatar-container {
-        width: 25px;
-    }
-} */
+
 .avatar-container {
     width: clamp(3rem, 300px, 20rem);
     height: clamp(3rem, 300px, 20rem);
@@ -432,7 +425,6 @@ nav {
 /* PROJECTS */
 
 #projects {
-    /* width: 67%; */
     max-width: 32rem;
     display: flex;
     flex-direction: column;
@@ -482,7 +474,7 @@ nav {
     align-items: center;
     flex-direction: column;
     overflow: hidden;
-    height: fit-content;
+    height: auto;
     width: 100%;
     opacity: 0;
     transform: translateY(30px);
@@ -502,10 +494,6 @@ nav {
         color: var(--clr-primary);
         margin-bottom: var(--mg-items);
         text-align: center;
-    }
-
-    a {
-        pointer-events: none;
     }
 
     .btn-rect {
@@ -537,7 +525,6 @@ nav {
         color: var(--clr-primary);
         border: 1px solid var(--accent-color);
         border-radius: 50%;
-        /* padding: 1.2rem; */
         width: 3rem;
         height: 3rem;
         aspect-ratio: 1/1;
@@ -586,7 +573,7 @@ nav {
 
 .project-card-container input:checked + label, 
 .project-card:focus-within {
-    height: fit-content;
+    height: auto;
 }
 
 
@@ -649,7 +636,7 @@ nav {
 .language-card {
 
     &:hover .language-card-wrapper, 
-    &:focus .language-card-wrapper {
+    &:focus-visible .language-card-wrapper {
         transform: rotateY(180deg);
     }
 }
@@ -768,19 +755,6 @@ nav {
     }
 }
 
-/* .btn-rect:hover .btn-rect-box::after, 
-.btn-rect:focus .btn-rect-box::after {    
-    background: conic-gradient(from var(--angle), transparent 10%, #FE6F1F, #F24B64, #C14C8D, #FE6F1F);
-    animation: border-rotation 2.5s linear infinite, fade 0.5s linear 1;
-}
-
-.btn-rect:hover .btn-rect-box::before, 
-.btn-rect:focus .btn-rect-box::before 
-{
-    background: conic-gradient(from var(--angle), transparent 10%, #FE6F1F, #F24B64, #C14C8D, #FE6F1F);
-    animation: blur-rotation 2.5s linear infinite, border-rotation 2.5s linear infinite, fade 0.5s linear 1;
-} */
-
 .btn-rect-content {
     padding: 0.5rem;
 }
@@ -886,37 +860,33 @@ nav {
         width: clamp(.75rem, calc(.2vw + 1rem), 1.5rem);
         height: clamp(.75rem, calc(.2vw + 1rem), 1.5rem);
     }
+
+    &::after {
+        content: "";
+        width: 0px;
+        height: 4px;
+        background: var(--gradient-primary);
+        position: absolute;
+        align-self: flex-end;
+        bottom: 0;
+        left: 0;
+        border-radius: 100px;
+        transition: 300ms ease-in-out;
+    }
     
     &:hover, 
-    &:focus {
+    &:focus-visible {
         transform: scale(1.1);
-    }      
 
-}
-
-
-
-.btn-nav::after {
-    content: "";
-    width: 0px;
-    height: 4px;
-    background: var(--gradient-primary);
-    position: absolute;
-    align-self: flex-end;
-    bottom: 0;
-    left: 0;
-    border-radius: 100px;
-    transition: 300ms ease-in-out;
-}
-
-.btn-nav:hover::after, 
-.btn-nav:focus::after 
-{
-    width: 100%;
-}
-
-.btn-nav:active {
+        &::after {
+           width: 100%;
+        }
+    
+    }    
+    
+    &:active {
     color: var(--clr-secondary);
+    }
 }
 
 /* FOOTER */
